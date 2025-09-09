@@ -288,7 +288,7 @@ local World = GuiLibrary.CreateWindow({
 	Icon = "vape/assets/WorldIcon.png", 
 	IconSize = 16
 })
-local Voidware = GuiLibrary.CreateWindow({
+[[--local Voidware = GuiLibrary.CreateWindow({
 	Name = "Voidware", 
 	Icon = "vape/assets/UtilityIcon.png", 
 	IconSize = 17
@@ -302,7 +302,7 @@ local VoidwareDev = GuiLibrary.CreateWindow({
 	Name = "VoidwareDev", 
 	Icon = "vape/assets/HoverArrow2.png", 
 	IconSize = 17
-})
+})--]]
 local MobileSupport = GuiLibrary.CreateWindow({
 	Name = "MobileSupport", 
 	Icon = "vape/assets/HoverArrow2.png", 
@@ -360,7 +360,7 @@ GUI.CreateButton({
 	Icon = "vape/assets/WorldIcon.png", 
 	IconSize = 16
 })
-GUI.CreateButton({
+[[--GUI.CreateButton({
 	Name = "Voidware", 
 	Function = function(callback) Voidware.SetVisible(callback) end, 
 	Icon = "vape/assets/UtilityIcon.png", 
@@ -375,7 +375,7 @@ GUI.CreateDivider("Other")
 GUI.CreateButton({
 	Name = "VoidwareDev", 
 	Function = function(callback) VoidwareDev.SetVisible(callback) end, 
-})
+})--]]
 GUI.CreateButton({
 	Name = "MobileSupport", 
 	Function = function(callback) MobileSupport.SetVisible(callback) end, 
