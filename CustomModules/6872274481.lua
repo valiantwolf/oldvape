@@ -3527,7 +3527,7 @@ run(function()
 										break
 									end
 									local selfpos = selfrootpos + (killaurarange.Value > 14 and (selfrootpos - root.Position).magnitude > 14.4 and (CFrame.lookAt(selfrootpos, root.Position).lookVector * ((selfrootpos - root.Position).magnitude - 14)) or Vector3.zero)
-									bedwars.SwordController.lastAttack = workspace:GetServerTimeNow() - 1
+									bedwars.SwordController.lastAttack = workspace:GetServerTimeNow() 
 									store.attackReach = math.floor((selfrootpos - root.Position).magnitude * 100) / 100
 									store.attackReachUpdate = tick() + 1
 									killaurarealremote:FireServer({
@@ -3625,7 +3625,7 @@ run(function()
 	killaurarange = Killaura.CreateSlider({
 		Name = "Attack range",
 		Min = 1,
-		Max = 18,
+		Max = 23,
 		Function = function(val)
 			if killaurarangecirclepart then
 				killaurarangecirclepart.Size = Vector3.new(val * 0.7, 0.01, val * 0.7)
@@ -3633,7 +3633,7 @@ run(function()
 		end,
 		Default = 18
 	})
-	killaurahitdelay = Killaura.CreateSlider({
+	--[[killaurahitdelay = Killaura.CreateSlider({
 		Name = "Hit Delay",
 		Min = 0,
 		Max = 10,
@@ -3641,7 +3641,7 @@ run(function()
 
 		end,
 		Default = 0
-	})
+	})--]]
 	killauraangle = Killaura.CreateSlider({
 		Name = "Max angle",
 		Min = 1,
