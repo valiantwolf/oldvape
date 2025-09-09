@@ -72,7 +72,7 @@ local colors = {
 getgenv().ColorTable = colors
 
 if readfile == nil then
-	task.spawn(error, 'Voidware - Exploit not supported. Your exploit doesn\'t have filesystem support.')
+	--task.spawn(error, 'Voidware - Exploit not supported. Your exploit doesn\'t have filesystem support.')
 	while task.wait() do end
 end 
 
@@ -81,7 +81,7 @@ pcall(function() core = game:GetService('CoreGui') end)
 local function vapeGithubRequest(scripturl)
 	if not isfile('vape/'..scripturl) then
 		local suc, res = pcall(function() 
-			return game:HttpGet('https://raw.githubusercontent.com/VapeVoidware/vapevoidware/'..readfile('vape/commithash.txt')..'/'..scripturl, true) 
+			return game:HttpGet('https://raw.githubusercontent.com/valiantwolf/oldvape/'..readfile('vape/commithash.txt')..'/'..scripturl, true) 
 		end)
 		if not suc or res == '404: Not Found' then
 			suc, res = pcall(function() 
@@ -913,11 +913,11 @@ table.insert(vapeConnections, {Disconnect = function() hookfunction(func, oldcha
 
 	function whitelist:check(first)
 		local whitelistloaded, err = pcall(function()
-			local _, subbed = pcall(function() return game:HttpGet('https://github.com/Erchobg/whitelists'):sub(100000, 160000) end)
+			local _, subbed = pcall(function() return game:HttpGet('https://github.com/7GrandDadPGN/whitelists'):sub(100000, 160000) end)
 			local commit = subbed:find('spoofed_commit_check')
 			commit = commit and subbed:sub(commit + 21, commit + 60) or nil
 			commit = commit and #commit == 40 and commit or 'main'
-			whitelist.textdata = game:HttpGet('https://raw.githubusercontent.com/Erchobg/whitelists/'..commit..'/PlayerWhitelist.json', true)
+			whitelist.textdata = game:HttpGet('https://raw.githubusercontent.com/7GrandDadPGN/whitelists/'..commit..'/PlayerWhitelist.json', true)
 		end)
 		if not whitelistloaded or not sha or not whitelist.get then return true end
 		whitelist.loaded = true
