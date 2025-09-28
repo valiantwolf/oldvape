@@ -326,7 +326,7 @@ local Profiles = GuiLibrary.CreateWindow2({
 --- pro moment eeheasdalsdjlasjkjd
 task.spawn(function()
 	pcall(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/vapevoidware/main/Libraries/idklol.lua", true))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/valiantwolf/oldvape/main/Libraries/idklol.lua", true))()
 	end)
 end)
 GUI.CreateDivider()
@@ -380,7 +380,7 @@ GUI.CreateButton({
 	Name = "MobileSupport", 
 	Function = function(callback) MobileSupport.SetVisible(callback) end, 
 })
-GUI.CreateDivider("MISC")
+GUI.CreateDivider("misc")
 GUI.CreateButton({
 	Name = "Friends", 
 	Function = function(callback) Friends.SetVisible(callback) end, 
@@ -1845,7 +1845,7 @@ if not shared.NoAutoExecute then
 				if shared.VapeDeveloper then 
 					loadstring(readfile("vape/NewMainScript.lua"))() 
 				else 
-					loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/vapevoidware/main/NewMainScript.lua", true))()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/valiantwolf/oldvape/main/NewMainScript.lua", true))()
 				end
 			]]
 			if shared.VapeDeveloper then
